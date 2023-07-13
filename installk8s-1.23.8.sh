@@ -12,11 +12,11 @@ echo "            -> Done"
 echo "     STEP 2: Installing apt-transport-https"
         sudo apt-get install -y apt-transport-https 1>/dev/null
         curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
-        sudo echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' > /etc/apt/sources.list.d/kubernetes.list
+        sudo bash -c echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' > /etc/apt/sources.list.d/kubernetes.list
 echo "            -> Done"
 
 echo "     STEP 3: Updating apt"
-        apt-get update 1>/dev/null
+        sudo apt-get update 1>/dev/null
 echo "            -> Updated ...."
 
 echo "     STEP 4: Starting Docker Deamon and enable Service....."
@@ -31,13 +31,13 @@ echo "            -> Done"
 
 echo "     STEP 6: Installing kubenetes master components"
         echo "            -> Installing kubelet"
-                apt-get install -y kubelet 1>/dev/null
+                sudo apt-get install -y kubelet 1>/dev/null
         echo "            -> Installing kubeadm"
-                apt-get install -y kubeadm 1>/dev/null
+                sudo apt-get install -y kubeadm 1>/dev/null
         echo "            -> Installing kubectl"
-                apt-get install -y kubectl 1>/dev/null
+                sudo apt-get install -y kubectl 1>/dev/null
         echo "            -> Installing kubernetes-cni"
-                apt-get install -y kubernetes-cni 1>/dev/null
+                sudo apt-get install -y kubernetes-cni 1>/dev/null
      
 
 echo "-----------------------------------------------------------"
