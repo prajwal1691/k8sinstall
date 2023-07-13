@@ -31,11 +31,11 @@ echo "            -> Done"
 
 echo "     STEP 6: Installing kubenetes master components"
         echo "            -> Installing kubelet"
-                apt-get install -y kubelet=1.23.8-00 1>/dev/null
+                apt-get install -y kubelet 1>/dev/null
         echo "            -> Installing kubeadm"
-                apt-get install -y kubeadm=1.23.8-00 1>/dev/null
+                apt-get install -y kubeadm 1>/dev/null
         echo "            -> Installing kubectl"
-                apt-get install -y kubectl=1.23.8-00 1>/dev/null
+                apt-get install -y kubectl 1>/dev/null
         echo "            -> Installing kubernetes-cni"
                 apt-get install -y kubernetes-cni 1>/dev/null
      
